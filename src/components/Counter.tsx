@@ -1,7 +1,11 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 
-const Counter = () => {
+const Counter = ({ defaultCount = 0 }) => {
     const [count, setCount] = useState(0)
+
+    useEffect(() => {
+        setCount(defaultCount)
+    },[defaultCount])
 
     const increment = () => {
         setCount(prev => prev + 1)

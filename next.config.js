@@ -9,9 +9,6 @@ const nextConfig = {
     config.plugins.push(
         new NextFederationPlugin({
           name: 'remoteApp',
-          remotes: {
-            hostApp: `hostApp@http://localhost:3001/_next/static/${isServer ? 'ssr' : 'chunks'}/remoteEntry.js`,
-          },
           filename: 'static/chunks/remoteEntry.js',
           exposes: {
             './counter': './src/components/Counter.tsx',
