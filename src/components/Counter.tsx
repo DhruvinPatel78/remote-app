@@ -1,6 +1,10 @@
 import React, {useEffect, useState} from "react";
 
-const Counter = ({ defaultCount = 0 }) => {
+interface counterPros {
+    defaultCount: number
+}
+
+const Counter = ({ defaultCount = 0 } : counterPros) => {
     const [count, setCount] = useState(0)
 
     useEffect(() => {

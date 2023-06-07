@@ -6,6 +6,7 @@ const nextConfig = {
   webpack: (config, options) => {
     const { isServer } = options;
     config.experiments = { layers: true, topLevelAwait: true };
+    config.devtool= 'inline-source-map';
     config.plugins.push(
         new NextFederationPlugin({
           name: 'remoteApp',
