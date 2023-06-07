@@ -17,7 +17,7 @@ const Counter = ({ defaultCount = 0 }) => {
 
     return <div style={{ width: 350, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 15, marginTop: 20 }}>
         <button style={{ width: 100, borderRadius: '8px',background: 'transparent', height: 40, border: '1px solid #2980b9', color: '#2980b9', fontSize: '20px' }} onClick={decrement}>-</button>
-        <div>Count {count}</div>
+        <div>Count = {count}</div>
         <button style={{ width: 100, borderRadius: '8px',background: '#2980b9', height: 40, borderColor: 'transparent', color: 'white', fontSize: '20px' }} onClick={increment}>+</button>
     </div>
 }
